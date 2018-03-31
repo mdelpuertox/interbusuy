@@ -1,0 +1,64 @@
+﻿  <!DOCTYPE HTML>
+<html>
+    <head><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="../css/material-icons.css"/>
+      <link rel="stylesheet" type="text/css" href="../css/css.css">
+            <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body onload="yelp()">
+<div class="container">
+       <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <a href="#!" class="brand-logo">Interbus</a>
+      <ul class="left hide-on-large-only">
+        <li><a href="../index.html"><i class="material-icons">arrow_back</i></a></li>
+      </ul>
+      <ul class="right show-on-large hide-on-med-and-down">
+        <li><a href="../index.html"><i class="material-icons">arrow_back</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <br/>
+  <br/>
+  <br/>
+  <div class="container">
+   <p class="teal-text">
+       Seleccione el recorrido.
+   </p>
+ <form>
+   <select class="teal-text" id="provincias" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);"></select>
+  <script>
+ 
+ function cargar() {
+ var provincias = ["Lineas", "1A-2A Santa Lucia - Canelones", "1A-2A-804 Directo Santa Lucia - Canelones", "1M Playa Pascual", "1M Santa Monica - Km. 29.5", "2K Santa Lucia", "2M Libertad", "3A Villa Foresti", "4A/4AC San Francisco", "4AD/4DD El Santo", "4D Barrio Obelisco", "4DR Canelon Chico", "5D Sauce", "6A Sauce", "6R6 Sauce", "7A Pando por C. Maldonado", "7A Directo por Gral. Flores", "7A Emp. Olmos - Montevideo", "7A Pando - Ruta 8 Km.22", "7A Pando por Pancovi", "7A Ruta 8 Km. 26 por C. Ventura - Los Aromos", "7A Ruta 8 Km. 26 por V.Guadalupe-V.Manuela", "7A-758 El Talar", "7E7R Pinar-Lagomar por Av. Rivera", "7E8R Pinar por Transversal", "7H Progreso - Pando por Las Piedras - La Paz - Toledo", "8A Soca por Pando - Emp. Olmos", "8E7R Costa Urbana por Calcagno", "8E7R-8E8R Solymar Norte", "9A Pando - Montes", "10A Tala", "11A Sauce", "11C San Ramon - Canelones", "11S Sauce San Jacinto", "11T San Bautista - Tala", "14A Pando - Tapia", "14A San Jacinto", "14AB/14AR Pando", "15A San Antonio", "48D Barrio Obelisco", "214 Pinar", "221 Pinar", "222 Parque del Plata", "227 Playa Pascual", "268 Suarez", "276 Santos Lugares", "600 Santa Isabel - La Paz", "700-710-711 por Interbalnearia", "701 Pando por Av. Italia", "703-704 Aeropuerto x Col Nicolich", "705-7E5 Colinas de Solymar", "706 Pando por Geant", "707-708 Solymar Sur", "709 Marindia-Salinas", "710 Parque del Plata", "711 La Floresta - Costa Azul -B. Horizonte", "712 Jaureguiberry", "714 Pinar por Giannattasio", "724 Pando x Av Italia-Nicolich R.8", "750-751-752 Suarez", "756-757-758-7H Pando-Suarez", "757 Zonamerica-Pinar", "758 Pinar-Aeropuerto", "759 Pando- Pinar", "760 Pinar-Geant", "761 Parque del Plata - Paso Carrasco", "802-803-804 S.Lucia por Cerrillos-P.Tajes-A.Corrientes", "805 Las Brujas", "806 Villa Alegria", "807 Villa Alegria", "808 Almacen Calcagno", "809 Progreso", "809-810 Directo Progreso- Juanico", "C1 Salinas", "C2 Salinas", "C3 Parque del Plata", "C4 Parque del Plata", "C5 Est. Atlantida", "L1 Pando - Paso Carrasco", "L2 Pando - Tala", "L33 Sauce - Toledo", "L3N Pando - Ruta 8 Km. 22", "L3R Pando - Ruta 8 Km. 22", "L4N Pando - Geant", "L4R Pando - Geant", "L5 Pando - Paso Carrasco", "L6 Pando - Paso Carrasco", "L6 Sauce - B Libertador", "Linea 5 Atlantida - Estacion", "Linea 6 Pando - Parque del Plata", "Linea 7 Atlantida - Jaureguiberry", "Linea 8 Soca - Cuchilla Alta", "LM1 Playa Pascual - S. Vazquez", "LM2 Playa Pascual - P. de la Arena", "LM13 Mendoza -Emp Sauce", "R1 Pando - Sauce", "R10 Pando - Neptunia", "R11 Pando - Salinas", "R12 Pando - Salinas", "R14 Pando - Emp. Olmos", "R15 Pando - Canada Grande", "R16 Pando - La Montanesa", "R17 Pando - Bonifacino", "R20 Pando - Toledo", "R24 Pando - R84 Km. 0", "R25 Pando Parque del Plata", "Tala - Las Nutrias", "Tala - Mevir", "Tala - Migues", "Tala - Montes", "Z1 Canelones - Costa Azul por Pando", "Z2 Canelones - Costa Azul por Ruta 11", "Z3 Canelones - Cerrillos", "Z4 Canelones - San  Bautista ", "Z5 Canelones - Santa Lucia", "Z5 Canelones - Sauce", "Z6 Canelones - Tala"]; //Tu array de provincias
+ var select = document.getElementById("provincias"); //Seleccionamos el select
+ 
+ for(var i=0; i < provincias.length; i++){ 
+ var option = document.createElement("option"); //Creamos la opcion
+ option.innerHTML = provincias[i]; //Metemos el texto en la opción
+ select.appendChild(option); //Metemos la opción en el select
+ }
+ }
+ cargar();
+ </script>
+</form>
+
+</div></div>
+<script type="text/javascript">
+  function yelp() {
+    $(document).ready(function() {
+    $('select').material_select();
+  });
+
+  }
+</script>
+
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+    </body>
+  </html>

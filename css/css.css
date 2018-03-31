@@ -1,0 +1,22 @@
+body {
+	min-width: 360px !important;
+	background-image: url(fondo.png) !important;
+	background-repeat: repeat !important;
+}
+i.icon-root {
+	color: #e0f2f1 !important;
+}
+
+.input-field {
+   color: #e0f2f1 !important;
+ }
+ .tealc {
+     color:#4db6ac !important;
+ }
+ .reco {
+     font-size: 13px !important;
+ }
+.reco2 {
+     font-size: 17px !important;
+     font-weight: bold !important;
+ }
